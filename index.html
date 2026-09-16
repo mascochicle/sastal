@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sastal: páginas web sencillas para negocios de Campeche, listas en 48 horas, con botón de WhatsApp. Manuales técnicos, traducción y Excel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6E5B'/%3E%3Cpath d='M9 20l7-9 7 9z' fill='%23fff'/%3E%3C/svg%3E">
+<title>Sastal · Páginas web para negocios de Campeche</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F5F7F4; --paper:#FFFFFF; --ink:#14201C; --muted:#5B6964;
+  --accent:#0E6E5B; --accent-ink:#FFFFFF; --soft:#DDEDE7; --line:#D9E1DD; --wa:#25D366;
+  --shadow:0 8px 24px rgba(20,40,30,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1614; --paper:#182220; --ink:#EAF1EE; --muted:#9CAAA4;
+    --accent:#4FC3A6; --accent-ink:#0F1614; --soft:#1F2F2A; --line:#2A3835;
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1614; --paper:#182220; --ink:#EAF1EE; --muted:#9CAAA4;
+  --accent:#4FC3A6; --accent-ink:#0F1614; --soft:#1F2F2A; --line:#2A3835;
+  --shadow:0 8px 24px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding-block:0 90px;padding-inline:16px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:20px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:18px;display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;background:var(--accent);border-radius:3px;display:inline-block;transform:rotate(45deg)}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.hero{padding-block:24px 36px;max-width:640px}
+.hero h1{font-size:clamp(32px,5.5vw,48px);font-weight:700}
+.hero p{font-size:19px;color:var(--muted);margin:16px 0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:13px 20px;border-radius:10px;text-decoration:none;font-size:16px}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+section{padding-block:28px;border-top:1px solid var(--line)}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px}
+h2{font-size:28px;margin-bottom:18px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.plan.hi{border-color:var(--accent);box-shadow:var(--shadow)}
+.plan h3{font-size:19px}
+.plan .p{font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.plan .p small{font-size:14px;color:var(--muted);font-weight:500}
+.plan ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.plan .tag{align-self:flex-start;background:var(--soft);color:var(--accent);font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.step::before{counter-increment:s;content:counter(s);font-family:"IBM Plex Mono",monospace;color:var(--accent);font-weight:500;display:block;margin-bottom:6px}
+.step b{display:block;margin-bottom:4px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.demo{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+.demo .thumb{background:linear-gradient(135deg,#FBF6EE 0 60%,#C8442A 60%);border-radius:10px;aspect-ratio:16/10;max-width:100%;border:1px solid var(--line);position:relative;overflow:hidden}
+.demo .thumb::after{content:"Lonchería La Ceiba";position:absolute;left:14px;top:14px;font-weight:700;color:#2B2118;font-size:15px}
+.demo p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.extra .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.extra h3{font-size:17px;margin-bottom:6px}
+.extra p{margin:0;color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:700;color:var(--accent);font-size:22px}
+.about p{margin:0 0 8px;color:var(--muted);font-size:16px}
+.faq details{border-top:1px solid var(--line);padding:12px 0}
+.faq summary{font-weight:600;cursor:pointer}
+.faq p{margin:8px 0 0;color:var(--muted);font-size:15px}
+footer.site{color:var(--muted);font-size:13px;text-align:center;padding-top:30px}
+@media (max-width:680px){.plans,.steps,.demo,.extra{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <div class="brand"><i></i> Sastal</div>
+  <span class="mono">San Francisco de Campeche</span>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Sitios web para negocios locales</div>
+  <h1>Que te encuentren en Google y te pidan por WhatsApp. Listo en 48 horas.</h1>
+  <p>Una página sencilla, rápida y hecha para celular, con tu menú o catálogo, horario, ubicación y botón directo a tu WhatsApp. Sin mensualidades obligatorias.</p>
+  <div class="actions">
+    <a class="btn wa" href="https://wa.me/529811380804?text=Hola%20Marco%2C%20me%20interesa%20una%20p%C3%A1gina%20para%20mi%20negocio">Cotizar por WhatsApp</a>
+    <a class="btn ghost" href="https://claude.ai/artifact/MgMSUr7EeTpBMUqM1S72zq" target="_blank" rel="noopener">Ver un ejemplo</a>
+  </div>
+</div>
+
+<section>
+  <div class="eyebrow">Paquetes</div>
+  <h2>Precios claros, pago único</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Presencia</h3>
+      <div class="p">$1,000 <small>MXN</small></div>
+      <ul>
+        <li>Página de una sola pantalla</li>
+        <li>Horario, dirección y mapa</li>
+        <li>Botón de WhatsApp y llamada</li>
+        <li>Enlace listo para tu Facebook e Instagram</li>
+        <li>Entrega en 48 h</li>
+      </ul>
+    </div>
+    <div class="plan hi">
+      <span class="tag">El más pedido</span>
+      <h3>Menú o catálogo</h3>
+      <div class="p">$2,000 <small>MXN</small></div>
+      <ul>
+        <li>Todo lo del paquete Presencia</li>
+        <li>Menú o catálogo completo con precios</li>
+        <li>Sección de servicios y opiniones</li>
+        <li>Perfil de Google Maps configurado</li>
+        <li>Una ronda de cambios incluida</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Dominio propio</h3>
+      <div class="p">+ $900 <small>MXN / año</small></div>
+      <ul>
+        <li>Tu dirección tunegocio.com o .com.mx</li>
+        <li>Correo profesional opcional</li>
+        <li>Se agrega a cualquier paquete</li>
+        <li>Incluye el registro del primer año</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Ejemplo</div>
+  <h2>Así queda un negocio de comida</h2>
+  <div class="demo">
+    <div>
+      <p>Lonchería La Ceiba es un negocio ficticio que armé como muestra: menú con precios, horario, ubicación, reseñas y botón de pedido por WhatsApp. Ábrelo en tu celular y verás cómo lo vería tu cliente.</p>
+      <a class="btn" href="https://claude.ai/artifact/MgMSUr7EeTpBMUqM1S72zq" target="_blank" rel="noopener">Abrir el ejemplo</a>
+    </div>
+    <div class="thumb" role="img" aria-label="Vista previa del sitio de muestra"></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Cómo funciona</div>
+  <h2>Tres pasos y ya</h2>
+  <div class="steps">
+    <div class="step"><b>Me mandas la información</b><p>Nombre, logo si tienes, fotos, precios, horario y tu número de WhatsApp. Por WhatsApp está bien.</p></div>
+    <div class="step"><b>Te envío la página en 48 h</b><p>La revisas en tu celular y me dices qué cambiar. Una ronda de cambios va incluida.</p></div>
+    <div class="step"><b>La publicamos y cobro</b><p>50% al iniciar y 50% al publicar. Transferencia, Mercado Pago o efectivo.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">También hago</div>
+  <h2>Trabajo técnico para empresas</h2>
+  <div class="extra">
+    <div class="card"><h3>Manuales y procedimientos</h3><p>Manuales de operación y mantenimiento, instructivos y formatos de seguridad, redactados por un ingeniero con 15 años en CFE.</p></div>
+    <div class="card"><h3>Traducción técnica inglés–español</h3><p>Hojas de datos, manuales de equipo y especificaciones, con la terminología correcta del ramo eléctrico e industrial.</p></div>
+    <div class="card"><h3>Control de inventario y ventas en Excel</h3><p>Hojas de cálculo listas para usar: entradas, salidas, existencias mínimas y reporte semanal automático.</p></div>
+    <div class="card"><h3>Planos y dibujos técnicos</h3><p>Levantamientos, diagramas unifilares y trazos arquitectónicos sencillos para trámites o remodelaciones.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Quién soy</div>
+  <div class="about">
+    <div class="avatar">MS</div>
+    <div>
+      <h2 style="margin-bottom:8px">Marco Sandoval</h2>
+      <p>Ingeniero en Electrónica y Comunicaciones por la UANL, con 15 años en la Comisión Federal de Electricidad. Soy de Campeche y aquí vivo; también tengo un negocio propio, así que sé lo que un comercio necesita: que el cliente encuentre el teléfono, el horario y el precio sin dar vueltas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="eyebrow">Dudas comunes</div>
+  <h2>Antes de preguntar</h2>
+  <details><summary>¿Tengo que pagar algo cada mes?</summary><p>No. El paquete es pago único. Solo el dominio propio, si lo quieres, se renueva cada año.</p></details>
+  <details><summary>¿Necesito saber de computación?</summary><p>No. Tú me mandas la información por WhatsApp y yo hago todo. Si después quieres cambiar precios, me escribes y lo actualizo.</p></details>
+  <details><summary>¿Puedo cambiar el menú después?</summary><p>Sí. Cambios pequeños (precios, horario) van sin costo el primer mes; después, $150 MXN por actualización.</p></details>
+  <details><summary>¿Y si no tengo fotos ni logo?</summary><p>Se puede armar sin logo, con tu nombre bien escrito, y con fotos que tomemos con el celular. Queda bien.</p></details>
+</section>
+
+<footer class="site">Sastal · Campeche, México · WhatsApp 981 138 0804</footer>
+</div>
+
+</body>
+</html>
