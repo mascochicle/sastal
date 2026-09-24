@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fotos para tu ofrenda · Sastal</title>
+<meta name="description" content="Restauramos con inteligencia artificial las fotos viejas, rotas o borrosas de tus seres queridos. Listas para imprimir en tu ofrenda. Desde $99.">
+<meta property="og:title" content="Esa foto de tus abuelos, como nueva para tu ofrenda">
+<meta property="og:description" content="Restauración de fotos con IA desde $99. Vista previa gratis por WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='7.5' fill='%230E6E5B'/%3E%3Cpath d='M17 6.8 27.2 17 17 27.2 6.8 17Z' fill='none' stroke='%23F5F7F4' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M17 12.9 21.1 17 17 21.1 12.9 17Z' fill='%23F5F7F4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;600;700&family=Outfit:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#2A1633;--night2:#3A2046;--cream:#FFF6E6;--cream2:#F1DCC4;--marigold:#F28C1B;--gold:#F7A928;--ink:#2A1633;--paper:#F6EEDC;--green:#0E6E5B;--wa:#25D366}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;margin:0;line-height:1.08;text-wrap:balance}
+a{color:inherit}
+.picado{height:54px;background:
+ repeating-linear-gradient(90deg,#C2185B 0 16.66%,#E8751A 16.66% 33.33%,#6A2C70 33.33% 50%,#0E8A74 50% 66.66%,#F2B705 66.66% 83.33%,#C2185B 83.33% 100%);
+ background-size:540px 100%;
+ clip-path:polygon(0 0,100% 0,100% 80%,97% 100%,94% 80%,91% 100%,88% 80%,85% 100%,82% 80%,79% 100%,76% 80%,73% 100%,70% 80%,67% 100%,64% 80%,61% 100%,58% 80%,55% 100%,52% 80%,49% 100%,46% 80%,43% 100%,40% 80%,37% 100%,34% 80%,31% 100%,28% 80%,25% 100%,22% 80%,19% 100%,16% 80%,13% 100%,10% 80%,7% 100%,4% 80%,1% 100%,0 80%)}
+.hero{background:var(--night);color:var(--cream)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:flex;gap:8px;align-items:center;font-family:Outfit;font-weight:700;font-size:20px;text-decoration:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:24px 0 64px}
+.hero h1{font-size:clamp(38px,6vw,62px)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--cream2);font-size:19px;margin:18px 0 26px;max-width:32em}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#07301A;font-weight:700;text-decoration:none;padding:15px 24px;border-radius:999px;font-size:17px}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.fine{font-size:14px;color:var(--cream2);margin-top:12px}
+.ej{margin:0;max-width:420px;justify-self:center}.ej .rt svg{width:100%;height:auto;border-radius:10px;box-shadow:0 18px 44px rgba(0,0,0,.4);display:block}.ej figcaption{text-align:center;color:var(--cream2);font-size:14px;margin-top:10px}
+section{padding:64px 0}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#B4570E;margin-bottom:10px}
+h2{font-size:clamp(30px,4.4vw,42px);margin-bottom:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:16px;padding:22px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--marigold);color:var(--night);font-weight:700;margin-bottom:12px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{margin:0;color:#5A4636}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.card.hi{background:var(--night);color:var(--cream);border-color:var(--night)}
+.card h3{font-size:24px}
+.card .p{font-family:Outfit;font-weight:700;font-size:40px;margin:10px 0 4px}
+.card .p small{font-size:16px;font-family:"Instrument Sans";font-weight:400;opacity:.8}
+.card ul{padding-left:18px;margin:10px 0 0;color:inherit}
+.card li{margin:4px 0}
+.card.hi .tag{align-self:flex-start;background:var(--gold);color:var(--night);font-weight:700;font-size:12px;letter-spacing:.08em;padding:4px 10px;border-radius:99px;margin-bottom:10px}
+.frame{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.faq details{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:10px 0 0;color:#5A4636}
+.cta{background:var(--night);color:var(--cream);text-align:center;padding:64px 16px}
+.cta h2{margin-bottom:14px}
+.cta p{color:var(--cream2);margin:0 0 24px}
+footer{text-align:center;font-size:14px;color:#6E5A48;padding:26px 16px 96px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 8px 22px rgba(0,0,0,.25);z-index:5}
+@media (max-width:760px){.hero-grid,.frame{grid-template-columns:1fr}.steps,.prices{grid-template-columns:1fr}section{padding:48px 0}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="picado" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="nav"><a class="logo" href="/"><svg viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="vertical-align:-5px"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg> Sastal</a><span style="display:flex;gap:18px"><a href="#precios" style="color:var(--cream2);text-decoration:none;font-weight:600">Precios</a><a href="/#servicios" style="color:var(--cream2);text-decoration:none;font-weight:600">Otros servicios</a></span></nav>
+    <div class="hero-grid">
+      <div>
+        <h1>Esa foto de tus abuelos, <em>como nueva</em> para tu ofrenda</h1>
+        <p>Restauramos con inteligencia artificial las fotos viejas, rotas, manchadas o borrosas de tus seres queridos. Te la entregamos lista para imprimir, a tiempo para el 1 y 2 de noviembre.</p>
+        <a class="btn" href="https://wa.me/529811380804?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg> Mándanos tu foto por WhatsApp</a>
+        <div class="fine">Vista previa gratis · Pagas solo si te gusta · Desde $99</div>
+      </div>
+      <figure class="ej"><div class="rt" data-retrato></div><figcaption>Así queda el retrato para ofrenda</figcaption></figure>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Así de fácil</div>
+    <h2>Sin salir de casa, en 24 horas</h2>
+    <div class="steps">
+      <div class="step"><h3>Tómale foto a la foto</h3><p>Con tu celular, de frente, con buena luz y sin flash. Mándala por WhatsApp. Si ya la tienes digital, mejor.</p></div>
+      <div class="step"><h3>Recibe tu vista previa</h3><p>Te enviamos la foto restaurada con marca de agua para que veas cómo quedó. Sin costo y sin compromiso.</p></div>
+      <div class="step"><h3>Paga y descarga</h3><p>Pagas con tarjeta o transferencia y te mandamos el archivo en alta calidad, listo para imprimir en cualquier papelería o centro de fotos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="precios" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Precios</div>
+    <h2>Elige cómo la quieres</h2>
+    <div class="prices">
+      <div class="card"><h3>Foto restaurada</h3><div class="p">$99 <small>por foto</small></div>
+        <ul><li>Rostros nítidos y sin rayones</li><li>Color corregido, más versión en blanco y negro</li><li>Archivo de alta calidad para imprimir</li></ul></div>
+      <div class="card hi"><span class="tag">MÁS PEDIDO</span><h3>Retrato para ofrenda</h3><div class="p">$149 <small>por foto</small></div>
+        <ul><li>Foto restaurada</li><li>Marco de papel picado y cempasúchil con nombre y fechas</li><li>Tamaño 5×7" u 8×10", listo para imprimir</li></ul></div>
+      <div class="card"><h3>Paquete familia</h3><div class="p">$379 <small>3 retratos</small></div>
+        <ul><li>Tres retratos para ofrenda</li><li>Mismo diseño para toda la familia</li><li>Cada foto adicional $99</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#FFFBF2;border-block:1px solid #EAD9BD">
+  <div class="wrap frame">
+    <div style="grid-column:1/-1;max-width:640px">
+      <div class="eyebrow">Retrato para ofrenda</div>
+      <h2>Un lugar digno en tu altar</h2>
+      <p>Diseñamos el retrato con papel picado, flores de cempasúchil, su nombre, sus fechas y una frase que tú elijas. Lo imprimes del tamaño que quieras y lo pones en tu marco o directo en la ofrenda.</p>
+      <a class="btn" href="https://wa.me/529811380804?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda" style="margin-top:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg> Quiero un retrato</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="eyebrow">Dudas frecuentes</div>
+    <h2>Preguntas</h2>
+    <details><summary>¿Y si la foto está muy dañada?</summary><p>Mándala de todos modos. La vista previa es gratis: si no queda bien, te lo decimos y no pagas nada.</p></details>
+    <details><summary>¿Le cambian la cara a mi familiar?</summary><p>No. La inteligencia artificial recupera nitidez y detalle, pero respeta sus rasgos. Si algo no se parece, lo ajustamos o no lo cobramos.</p></details>
+    <details><summary>¿Me entregan la foto impresa?</summary><p>Te entregamos el archivo digital en alta calidad. Lo puedes imprimir en cualquier centro de fotos o papelería por pocos pesos.</p></details>
+    <details><summary>¿Cómo pago?</summary><p>Con tarjeta de débito o crédito mediante un enlace seguro, o por transferencia. Pagas después de ver tu vista previa.</p></details>
+    <details><summary>¿Qué pasa con mis fotos?</summary><p>Solo las usamos para tu pedido. No las publicamos ni las compartimos, y las borramos al terminar si así lo pides.</p></details>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Que este año también estén en tu ofrenda</h2>
+  <p>Pedidos hasta el 30 de octubre para entrega a tiempo.</p>
+  <a class="btn" href="https://wa.me/529811380804?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg> Mandar mi foto</a>
+</div>
+
+<footer><svg viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="vertical-align:-5px"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg> Sastal · sastal.mx · San Francisco de Campeche, Camp. · Envíos digitales a todo México</footer>
+<a class="btn fab" href="https://wa.me/529811380804?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda" aria-label="Enviar foto por WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.3z"/></svg> WhatsApp</a>
+<script src="/retrato.js" defer></script>
+</body>
+</html>
