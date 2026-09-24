@@ -41,6 +41,17 @@ h2{font-size:clamp(30px,4.4vw,42px);margin-bottom:26px}
 .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--marigold);color:var(--night);font-weight:700;margin-bottom:12px}
 .step h3{font-size:22px;margin-bottom:6px}
 .step p{margin:0;color:#5A4636}
+.tips{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
+.tips ol{margin:0;padding:22px 22px 22px 44px;background:#FFFBF2;border:1px solid #EAD9BD;border-radius:16px}
+.tips li{margin:8px 0;padding-left:4px}
+.tips li::marker{color:#B4570E;font-weight:700}
+.tips .side{display:grid;gap:14px}
+.tips .box{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:16px;padding:20px}
+.tips .box.doc{background:var(--night);color:var(--cream);border-color:var(--night)}
+.tips h3{font-size:21px;margin-bottom:6px}
+.tips .box p{margin:0;color:#5A4636}
+.tips .box.doc p{color:var(--cream2)}
+@media (max-width:760px){.tips{grid-template-columns:1fr}}
 .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:18px;padding:26px;display:flex;flex-direction:column}
 .card.hi{background:var(--night);color:var(--cream);border-color:var(--night)}
@@ -84,9 +95,30 @@ footer{text-align:center;font-size:14px;color:#6E5A48;padding:26px 16px 96px}
     <div class="eyebrow">Así de fácil</div>
     <h2>Sin salir de casa, en 24 horas</h2>
     <div class="steps">
-      <div class="step"><h3>Tómale foto a la foto</h3><p>Con tu celular, de frente, con buena luz y sin flash. Mándala por WhatsApp. Si ya la tienes digital, mejor.</p></div>
+      <div class="step"><h3>Tómale foto a la foto</h3><p>Con tu celular, de frente, con buena luz y sin flash. Mándala por WhatsApp como documento. <a href="#como">Ver cómo</a>.</p></div>
       <div class="step"><h3>Recibe tu vista previa</h3><p>Te enviamos la foto restaurada con marca de agua para que veas cómo quedó. Sin costo y sin compromiso.</p></div>
       <div class="step"><h3>Paga y descarga</h3><p>Pagas con tarjeta o transferencia y te mandamos el archivo en alta calidad, listo para imprimir en cualquier papelería o centro de fotos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Antes de mandarla</div>
+    <h2>Para que tu foto quede lo mejor posible</h2>
+    <div class="tips">
+      <ol>
+        <li>Sácala del marco o mica.</li>
+        <li>Ponla sobre una mesa, cerca de una ventana con luz de día y <strong>sin flash</strong>.</li>
+        <li>Ponte justo encima, con el celular derecho, para que la foto llene casi toda la pantalla.</li>
+        <li>Revisa que no tenga brillos ni tu sombra encima.</li>
+        <li>Mándala como <strong>Documento</strong> (📎 → Documento), no como foto normal, para que no pierda calidad.</li>
+      </ol>
+      <div class="side">
+        <div class="box doc"><h3>¿Por qué como documento?</h3><p>WhatsApp comprime las fotos normales y se pierde detalle de la cara. Como documento llega completa y la restauración sale mucho mejor.</p></div>
+        <div class="box"><h3>¿Tienes escáner?</h3><p>Mejor todavía: escanéala a 600 dpi (1200 dpi si es una foto chica, tipo infantil), en color aunque sea blanco y negro, y guárdala en PNG.</p></div>
+        <div class="box"><h3>¿Le salen reflejos?</h3><p>La app gratuita Google PhotoScan quita los brillos de las fotos con acabado brillante.</p></div>
+      </div>
     </div>
   </div>
 </section>
