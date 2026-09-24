@@ -52,6 +52,20 @@ h2{font-size:clamp(30px,4.4vw,42px);margin-bottom:26px}
 .tips .box p{margin:0;color:#5A4636}
 .tips .box.doc p{color:var(--cream2)}
 @media (max-width:760px){.tips{grid-template-columns:1fr}}
+.mnote{color:#5A4636;margin:-12px 0 22px;max-width:40em}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.ba2{margin:0;background:#FFFBF2;border:1px solid #EAD9BD;border-radius:16px;padding:12px}
+.ba2 .cmp{position:relative;border-radius:10px;overflow:hidden;touch-action:pan-y}
+.ba2 .cmp img{display:block;width:100%;height:auto}
+.ba2 .cmp .antes{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.ba2 .cmp .antes img{width:100%;height:100%;object-fit:cover}
+.ba2 .cmp .bar{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
+.ba2 .cmp .bar::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;color:#2A1633;display:grid;place-items:center;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.ba2 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba2 .tag{position:absolute;top:8px;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.08em;pointer-events:none}
+.ba2 .tag.a{left:8px;background:rgba(20,10,25,.8);color:#fff}
+.ba2 .tag.d{right:8px;background:#F28C1B;color:#2A1633}
+.ba2 figcaption{font-size:14px;color:#5A4636;margin-top:10px}
 .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:#FFFBF2;border:1px solid #EAD9BD;border-radius:18px;padding:26px;display:flex;flex-direction:column}
 .card.hi{background:var(--night);color:var(--cream);border-color:var(--night)}
@@ -77,7 +91,7 @@ footer{text-align:center;font-size:14px;color:#6E5A48;padding:26px 16px 96px}
 <div class="hero">
   <div class="picado" aria-hidden="true"></div>
   <div class="wrap">
-    <nav class="nav"><a class="logo" href="/"><svg viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="vertical-align:-5px"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg> Sastal</a><span style="display:flex;gap:18px"><a href="#precios" style="color:var(--cream2);text-decoration:none;font-weight:600">Precios</a><a href="/#servicios" style="color:var(--cream2);text-decoration:none;font-weight:600">Otros servicios</a></span></nav>
+    <nav class="nav"><a class="logo" href="/"><svg viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="vertical-align:-5px"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg> Sastal</a><span style="display:flex;gap:18px"><a href="#muestras" style="color:var(--cream2);text-decoration:none;font-weight:600">Muestras</a><a href="#precios" style="color:var(--cream2);text-decoration:none;font-weight:600">Precios</a><a href="/#servicios" style="color:var(--cream2);text-decoration:none;font-weight:600">Otros servicios</a></span></nav>
     <div class="hero-grid">
       <div>
         <h1>Esa foto de tus abuelos, <em>como nueva</em> para tu ofrenda</h1>
@@ -89,6 +103,17 @@ footer{text-align:center;font-size:14px;color:#6E5A48;padding:26px 16px 96px}
     </div>
   </div>
 </div>
+
+<section id="muestras" style="padding-bottom:24px">
+  <div class="wrap">
+    <div class="eyebrow">Muestras reales</div>
+    <h2>Así quedan las fotos restauradas</h2>
+    <p class="mnote">Fotos de nuestra propia familia, escaneadas y restauradas con el mismo proceso que usamos para tu pedido. Desliza para comparar.</p>
+    <div class="mgrid">
+      <figure class="ba2"><div class="cmp"><img src="muestras/m1-despues.webp" width="360" height="360" alt="Foto familiar de los años 70 restaurada" loading="lazy"><div class="antes"><img src="muestras/m1-antes.webp" alt="Foto familiar de los años 70 antes de restaurar" loading="lazy"></div><div class="bar"></div><span class="tag a">ANTES</span><span class="tag d">DESPUÉS</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" oninput="this.parentNode.style.setProperty('--p',this.value+'%')"></div><figcaption>Años 70: color rojo deslavado y rostros borrosos. Recuperamos el color y la nitidez de las caras.</figcaption></figure><figure class="ba2"><div class="cmp"><img src="muestras/m3-despues.webp" width="420" height="288" alt="Foto de fiesta de 1973 restaurada" loading="lazy"><div class="antes"><img src="muestras/m3-antes.webp" alt="Foto de fiesta de 1973 antes de restaurar" loading="lazy"></div><div class="bar"></div><span class="tag a">ANTES</span><span class="tag d">DESPUÉS</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" oninput="this.parentNode.style.setProperty('--p',this.value+'%')"></div><figcaption>Fiesta, septiembre de 1973: tono magenta corregido y detalles recuperados.</figcaption></figure><figure class="ba2"><div class="cmp"><img src="muestras/m2-despues.webp" width="420" height="265" alt="Foto de grupo antigua en blanco y negro restaurada" loading="lazy"><div class="antes"><img src="muestras/m2-antes.webp" alt="Foto de grupo antigua en blanco y negro antes de restaurar" loading="lazy"></div><div class="bar"></div><span class="tag a">ANTES</span><span class="tag d">DESPUÉS</span><input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" oninput="this.parentNode.style.setProperty('--p',this.value+'%')"></div><figcaption>Foto de grupo en blanco y negro: limpieza, contraste y rostros más definidos.</figcaption></figure>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
