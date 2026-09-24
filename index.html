@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Sastal: páginas web sencillas para negocios de Campeche, listas en 48 horas, con botón de WhatsApp. Manuales técnicos, traducción y Excel.">
+<meta name="description" content="Sastal, Campeche: fotos restauradas para tu ofrenda, páginas web para negocios, invitaciones digitales y asistentes de WhatsApp con inteligencia artificial.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='7.5' fill='%230E6E5B'/%3E%3Cpath d='M17 6.8 27.2 17 17 27.2 6.8 17Z' fill='none' stroke='%23F5F7F4' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M17 12.9 21.1 17 17 21.1 12.9 17Z' fill='%23F5F7F4'/%3E%3C/svg%3E">
-<title>Sastal · Páginas web para negocios de Campeche</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<title>Sastal · Servicios digitales en Campeche</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Gloock&display=swap">
 <style>
 :root{
   --bg:#F5F7F4; --paper:#FFFFFF; --ink:#14201C; --muted:#5B6964;
@@ -71,6 +71,26 @@ h2{font-size:28px;margin-bottom:18px}
 .faq details{border-top:1px solid var(--line);padding:12px 0}
 .faq summary{font-weight:600;cursor:pointer}
 .faq p{margin:8px 0 0;color:var(--muted);font-size:15px}
+
+.season{position:relative;overflow:hidden;background:#2A1633;color:#FFF6E6;border-radius:18px;padding:34px 26px 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:36px}
+.season::before{content:"";position:absolute;left:0;right:0;top:0;height:26px;background:repeating-linear-gradient(90deg,#C2185B 0 60px,#E8751A 60px 120px,#6A2C70 120px 180px,#0E8A74 180px 240px,#F2B705 240px 300px);clip-path:polygon(0 0,100% 0,100% 70%,0 70%)}
+.season .eyebrow{color:#F7A928}
+.season h1{font-size:clamp(30px,5vw,44px);font-weight:700}
+.season h1 em{font-style:normal;color:#F7A928}
+.season p{color:#F1DCC4;font-size:18px;margin:14px 0 22px}
+.season .rt{width:100%;max-width:260px;justify-self:center}.season .rt svg{width:100%;height:auto;border-radius:8px;box-shadow:0 14px 34px rgba(0,0,0,.45);display:block}
+.season .btn.ghost{color:#FFF6E6;border-color:rgba(255,246,230,.35)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.svc a{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
+.svc a:hover{border-color:var(--accent)}
+.svc a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.svc h3{font-size:19px}
+.svc p{margin:0;color:var(--muted);font-size:15px}
+.svc .from{margin-top:auto;padding-top:8px;font-weight:600;color:var(--accent);font-size:15px}
+.svc .badge{align-self:flex-start;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--soft);color:var(--accent)}
+.svc .badge.hot{background:#F28C1B;color:#2A1633}
+#web h1{font-size:clamp(28px,4.4vw,36px)}
+@media (max-width:680px){.season,.svc{grid-template-columns:1fr}.season .rt{max-width:220px}}
 footer.site{color:var(--muted);font-size:13px;text-align:center;padding-top:30px}
 @media (max-width:680px){.plans,.steps,.demo,.extra{grid-template-columns:1fr}}
 </style>
@@ -83,7 +103,31 @@ footer.site{color:var(--muted);font-size:13px;text-align:center;padding-top:30px
   <span class="mono">San Francisco de Campeche</span>
 </header>
 
-<div class="hero">
+<div class="season">
+  <div>
+    <div class="eyebrow">Temporada de Día de Muertos</div>
+    <h1>Esa foto de tus abuelos, <em>como nueva</em> para tu ofrenda</h1>
+    <p>Restauramos con inteligencia artificial fotos viejas, rotas o borrosas y te las entregamos listas para imprimir. Vista previa gratis. Desde $99.</p>
+    <div class="actions">
+      <a class="btn wa" href="https://wa.me/529811380804?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda">Mandar mi foto por WhatsApp</a>
+      <a class="btn ghost" href="/ofrenda/">Ver precios y detalles</a>
+    </div>
+  </div>
+  <div class="rt" data-retrato></div>
+</div>
+
+<section id="servicios" style="border-top:0;padding-top:0">
+  <div class="eyebrow">Servicios</div>
+  <h2>Qué hacemos</h2>
+  <div class="svc">
+    <a href="/ofrenda/"><span class="badge hot">Temporada</span><h3>Fotos para tu ofrenda</h3><p>Restauración de fotos antiguas con IA y retrato con papel picado, nombre y fechas, listo para imprimir.</p><span class="from">Desde $99 →</span></a>
+    <a href="#web"><h3>Páginas web para negocios</h3><p>Tu menú o catálogo, horario, ubicación y botón de WhatsApp. Lista en 48 horas, pago único.</p><span class="from">Desde $1,000 →</span></a>
+    <a href="https://wa.me/529811380804?text=Hola%2C%20me%20interesa%20una%20invitaci%C3%B3n%20digital"><span class="badge">Nuevo</span><h3>Invitaciones digitales</h3><p>Para XV años, bodas, bautizos y cumpleaños: cuenta regresiva, mapa y confirmación de asistencia por WhatsApp.</p><span class="from">Cotiza por WhatsApp →</span></a>
+    <a href="https://wa.me/529811380804?text=Hola%2C%20me%20interesa%20un%20asistente%20de%20WhatsApp%20para%20mi%20negocio"><span class="badge">Nuevo</span><h3>Asistente de WhatsApp con IA</h3><p>Responde a tus clientes las 24 horas: precios, horarios, citas y pedidos. Lo configuramos por ti.</p><span class="from">Cotiza por WhatsApp →</span></a>
+  </div>
+</section>
+
+<div class="hero" id="web" style="border-top:1px solid var(--line);padding-top:32px;max-width:none">
   <div class="eyebrow">Sitios web para negocios locales</div>
   <h1>Que te encuentren en Google y te pidan por WhatsApp. Listo en 48 horas.</h1>
   <p>Una página sencilla, rápida y hecha para celular, con tu menú o catálogo, horario, ubicación y botón directo a tu WhatsApp. Sin mensualidades obligatorias.</p>
@@ -186,8 +230,9 @@ footer.site{color:var(--muted);font-size:13px;text-align:center;padding-top:30px
   <details><summary>¿Y si no tengo fotos ni logo?</summary><p>Se puede armar sin logo, con tu nombre bien escrito, y con fotos que tomemos con el celular. Queda bien.</p></details>
 </section>
 
-<footer class="site">Sastal · Campeche, México · WhatsApp 981 138 0804</footer>
+<footer class="site">Sastal · San Francisco de Campeche, México · WhatsApp 981 138 0804 · sastal.mx</footer>
 </div>
 
+<script src="/retrato.js" defer></script>
 </body>
 </html>
