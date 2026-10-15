@@ -1,230 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Sastal, Campeche: fotos restauradas para tu ofrenda, páginas web y publicaciones de Facebook para negocios, alta en Google Maps, invitaciones digitales y asistentes virtuales de WhatsApp.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sastal · Propiedades en Campeche</title>
+<meta name="description" content="Sastal: casas y departamentos en venta y renta en San Francisco de Campeche, mostrados directamente por sus propietarios. Visitas acompañadas y papeles en regla.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='7.5' fill='%230E6E5B'/%3E%3Cpath d='M17 6.8 27.2 17 17 27.2 6.8 17Z' fill='none' stroke='%23F5F7F4' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M17 12.9 21.1 17 17 21.1 12.9 17Z' fill='%23F5F7F4'/%3E%3C/svg%3E">
-<title>Sastal · Servicios digitales en Campeche</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Gloock&display=swap">
+<meta property="og:title" content="Sastal · Propiedades en Campeche">
+<meta property="og:description" content="Casas y departamentos en venta y renta en Campeche, directo con sus propietarios.">
+<meta property="og:image" content="https://propiedades.sastal.mx/img/casa-lomas/06-porche.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F5F7F4; --paper:#FFFFFF; --ink:#14201C; --muted:#5B6964;
-  --accent:#0E6E5B; --accent-ink:#FFFFFF; --soft:#DDEDE7; --line:#D9E1DD; --wa:#25D366;
-  --shadow:0 8px 24px rgba(20,40,30,.08);
+:root{--huevo:#f4efe6;--manta:#e9e1d3;--manta2:#d9cfbd;--carbon:#2b2926;--piedra:#6f6a62;--bronce:#8c7b5a;--bronce2:#6f6146;--verde:#0E6E5B;--blanco:#fff;
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--ancho:1140px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--huevo);color:var(--carbon);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:var(--ancho);margin:0 auto;padding-inline:20px}
+.eyebrow{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce2);font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,4.2vw,2.9rem)}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.85em 1.4em;border-radius:2px;font-weight:600;font-size:.92rem;text-decoration:none;letter-spacing:.02em;transition:background .2s,color .2s}
+.btn.solid{background:var(--carbon);color:var(--huevo)}.btn.solid:hover{background:var(--bronce2)}
+.btn.claro{background:var(--huevo);color:var(--carbon)}.btn.claro:hover{background:var(--blanco)}
+.btn.linea{border:1.5px solid currentColor}
+/* barra */
+.barra{position:absolute;inset:0 0 auto;z-index:5;color:var(--huevo)}
+.barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:1.55rem;font-weight:600}
+.barra nav{display:flex;gap:22px;font-size:.84rem;letter-spacing:.06em;text-transform:uppercase}
+.barra nav a{text-decoration:none;opacity:.9}.barra nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+/* portada */
+.portada{position:relative;min-height:min(92vh,760px);display:flex;align-items:flex-end;color:var(--huevo);background:#3a342c url(https://propiedades.sastal.mx/img/casa-lomas/06-porche.jpg) center/cover no-repeat}
+.portada::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,.15) 35%,rgba(20,18,15,.72) 100%)}
+.portada .wrap{position:relative;padding-block:120px 64px;width:100%}
+.portada .eyebrow{color:#e9dcc2}
+.portada h1{font-size:clamp(2.6rem,6.6vw,5rem);max-width:13ch;margin:.25em 0 .3em}
+.portada p{max-width:52ch;font-size:1.08rem;color:#efe7da;margin:0 0 1.6em}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+/* secciones */
+section{padding-block:clamp(56px,8vw,96px)}
+.cabeza{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:32px}
+.cabeza p{margin:.6em 0 0;color:var(--piedra);max-width:56ch}
+.lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px}
+.ficha{display:flex;flex-direction:column;background:var(--blanco);text-decoration:none;border:1px solid var(--manta);transition:transform .25s,box-shadow .25s}
+.ficha:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(43,41,38,.12)}
+.ficha .foto{aspect-ratio:4/3;background:var(--manta) center/cover no-repeat;position:relative}
+.ficha .etq{position:absolute;top:14px;left:14px;background:var(--huevo);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.45em .8em}
+.ficha .etq.ocupada{background:var(--carbon);color:var(--huevo)}
+.ficha .txt{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ficha .zona{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce2);font-weight:600}
+.ficha h3{font-size:1.6rem}
+.ficha .datos{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.86rem;color:var(--piedra)}
+.ficha .precio{margin-top:auto;padding-top:10px;font-family:var(--serif);font-size:1.5rem;font-weight:600;font-variant-numeric:tabular-nums}
+.ficha .precio small{font-family:var(--sans);font-size:.8rem;font-weight:400;color:var(--piedra)}
+.vacio{padding:28px;background:var(--blanco);border:1px solid var(--manta)}
+/* cómo */
+.como{background:var(--manta)}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px;margin-top:8px}
+.paso{border-top:1.5px solid var(--bronce);padding-top:18px}
+.paso .num{font-family:var(--serif);font-size:2.4rem;color:var(--bronce);line-height:1}
+.paso h3{font-size:1.45rem;margin:.35em 0 .3em}
+.paso p{margin:0;color:var(--piedra)}
+/* propietarios */
+.duenos{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.duenos .img{aspect-ratio:5/4;background:var(--manta) url(https://propiedades.sastal.mx/img/casa-lomas/01-esquina-centrada.jpg) center/cover}
+.duenos p{color:var(--piedra);max-width:50ch}
+/* contacto */
+.contacto{background:var(--carbon);color:var(--huevo)}
+.contacto .eyebrow{color:#cdbb95}
+.contacto .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.contacto p{color:#d8d0c3;max-width:46ch}
+.datoscont{display:flex;flex-direction:column;gap:14px;font-size:1.02rem}
+.datoscont span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#cdbb95}
+.datoscont a{text-decoration:none;font-variant-numeric:tabular-nums}.datoscont a:hover{text-decoration:underline}
+/* digital */
+.digital{padding-block:44px}
+.digital .caja{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--manta2);padding:24px 28px;background:var(--huevo)}
+.digital h3{font-size:1.5rem}
+.digital p{margin:.25em 0 0;color:var(--piedra);font-size:.95rem}
+footer{border-top:1px solid var(--manta2);padding-block:26px;font-size:.84rem;color:var(--piedra)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+@media (max-width:760px){
+ .barra nav{display:none}
+ .duenos,.contacto .wrap{grid-template-columns:1fr}
+ .portada .wrap{padding-block:110px 44px}
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0F1614; --paper:#182220; --ink:#EAF1EE; --muted:#9CAAA4;
-    --accent:#4FC3A6; --accent-ink:#0F1614; --soft:#1F2F2A; --line:#2A3835;
-    --shadow:0 8px 24px rgba(0,0,0,.4);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0F1614; --paper:#182220; --ink:#EAF1EE; --muted:#9CAAA4;
-  --accent:#4FC3A6; --accent-ink:#0F1614; --soft:#1F2F2A; --line:#2A3835;
-  --shadow:0 8px 24px rgba(0,0,0,.4);
-}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.55;margin:0}
-.wrap{max-width:900px;margin:0 auto;padding-block:0 90px;padding-inline:16px}
-h1,h2,h3{text-wrap:balance;margin:0;line-height:1.15}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:20px;flex-wrap:wrap}
-.brand{font-weight:700;font-size:18px;display:flex;align-items:center;gap:10px}
-.brand .mk{width:30px;height:30px;border-radius:7px}
-.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:13px;color:var(--muted);letter-spacing:.02em}
-.hero{padding-block:24px 36px;max-width:640px}
-.hero h1{font-size:clamp(32px,5.5vw,48px);font-weight:700}
-.hero p{font-size:19px;color:var(--muted);margin:16px 0 24px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:13px 20px;border-radius:10px;text-decoration:none;font-size:16px}
-.btn.wa{background:var(--wa);color:#fff}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.actions{display:flex;flex-wrap:wrap;gap:10px}
-section{padding-block:28px;border-top:1px solid var(--line)}
-.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px}
-h2{font-size:28px;margin-bottom:18px}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.plan{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px}
-.plan.hi{border-color:var(--accent);box-shadow:var(--shadow)}
-.plan h3{font-size:19px}
-.plan .p{font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
-.plan .p small{font-size:14px;color:var(--muted);font-weight:500}
-.plan ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:6px}
-.plan .tag{align-self:flex-start;background:var(--soft);color:var(--accent);font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s}
-.step{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
-.step::before{counter-increment:s;content:counter(s);font-family:"IBM Plex Mono",monospace;color:var(--accent);font-weight:500;display:block;margin-bottom:6px}
-.step b{display:block;margin-bottom:4px}
-.step p{margin:0;color:var(--muted);font-size:15px}
-.demo{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
-.demo .thumb{background:linear-gradient(135deg,#FBF6EE 0 60%,#C8442A 60%);border-radius:10px;aspect-ratio:16/10;max-width:100%;border:1px solid var(--line);position:relative;overflow:hidden}
-.demo .thumb::after{content:"Lonchería La Ceiba";position:absolute;left:14px;top:14px;font-weight:700;color:#2B2118;font-size:15px}
-.demo p{margin:0 0 14px;color:var(--muted);font-size:15px}
-.extra{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.extra .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
-.extra h3{font-size:17px;margin-bottom:6px}
-.extra p{margin:0;color:var(--muted);font-size:15px}
-.about{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
-.avatar{width:64px;height:64px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:700;color:var(--accent);font-size:22px}
-.about p{margin:0 0 8px;color:var(--muted);font-size:16px}
-.faq details{border-top:1px solid var(--line);padding:12px 0}
-.faq summary{font-weight:600;cursor:pointer}
-.faq p{margin:8px 0 0;color:var(--muted);font-size:15px}
-
-.season{position:relative;overflow:hidden;background:#2A1633;color:#FFF6E6;border-radius:18px;padding:34px 26px 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:36px}
-.season::before{content:"";position:absolute;left:0;right:0;top:0;height:26px;background:repeating-linear-gradient(90deg,#C2185B 0 60px,#E8751A 60px 120px,#6A2C70 120px 180px,#0E8A74 180px 240px,#F2B705 240px 300px);clip-path:polygon(0 0,100% 0,100% 70%,0 70%)}
-.season .eyebrow{color:#F7A928}
-.season h1{font-size:clamp(30px,5vw,44px);font-weight:700}
-.season h1 em{font-style:normal;color:#F7A928}
-.season p{color:#F1DCC4;font-size:18px;margin:14px 0 22px}
-.season .rt{width:100%;max-width:260px;justify-self:center}.season .rt svg{width:100%;height:auto;border-radius:8px;box-shadow:0 14px 34px rgba(0,0,0,.45);display:block}
-.season .btn.ghost{color:#FFF6E6;border-color:rgba(255,246,230,.35)}
-.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.svc a{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
-.svc a:hover{border-color:var(--accent)}
-.svc a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.svc h3{font-size:19px}
-.svc p{margin:0;color:var(--muted);font-size:15px}
-.svc .from{margin-top:auto;padding-top:8px;font-weight:600;color:var(--accent);font-size:15px}
-.svc .badge{align-self:flex-start;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--soft);color:var(--accent)}
-.svc .badge.hot{background:#F28C1B;color:#2A1633}
-#web h1{font-size:clamp(28px,4.4vw,36px)}
-@media (max-width:680px){.season,.svc{grid-template-columns:1fr}.season .rt{max-width:220px}}
-footer.site{color:var(--muted);font-size:13px;text-align:center;padding-top:30px}
-@media (max-width:680px){.plans,.steps,.demo,.extra{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<div class="wrap">
-<header>
-  <div class="brand"><svg class="mk" viewBox="0 0 34 34" width="30" height="30" aria-hidden="true"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg> Sastal</div>
-  <span class="mono">San Francisco de Campeche, Camp. · <a href="https://propiedades.sastal.mx" style="color:inherit;text-decoration:underline">Propiedades</a></span>
+<header class="barra">
+ <div class="wrap">
+  <a class="marca" href="/"><svg viewBox="0 0 34 34" width="30" height="30" aria-hidden="true"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg>Sastal</a>
+  <nav><a href="#propiedades">Propiedades</a><a href="#como">Cómo trabajamos</a><a href="#contacto">Contacto</a><a href="/digital/">Digital</a></nav>
+ </div>
 </header>
 
-<div class="season">
+<div class="portada">
+ <div class="wrap">
+  <div class="eyebrow">San Francisco de Campeche · Venta y renta</div>
+  <h1>Casas con historia, hogares con calma.</h1>
+  <p>Casas y departamentos en Campeche, presentados directamente por sus propietarios. Sin intermediarios, con visitas acompañadas y papeles en regla.</p>
+  <div class="acciones">
+   <a class="btn claro" href="https://propiedades.sastal.mx">Ver propiedades →</a>
+   <a class="btn linea" href="https://wa.me/529617874812?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20propiedades.">Escribir por WhatsApp</a>
+  </div>
+ </div>
+</div>
+
+<section id="propiedades">
+ <div class="wrap">
+  <div class="cabeza">
+   <div><div class="eyebrow">Catálogo</div><h2>Propiedades disponibles</h2><p>Una selección corta, cada una con fotos reales, medidas y condiciones claras.</p></div>
+   <a class="btn solid" href="https://propiedades.sastal.mx">Ver todo el catálogo</a>
+  </div>
+  <div class="lista" id="lista">
+   <div class="vacio">Consulta nuestras casas y departamentos en <a href="https://propiedades.sastal.mx">propiedades.sastal.mx</a>.</div>
+  </div>
+ </div>
+</section>
+
+<section class="como" id="como">
+ <div class="wrap">
+  <div class="eyebrow">Cómo trabajamos</div>
+  <h2 style="margin-bottom:28px">Trato directo, de principio a fin</h2>
+  <div class="pasos">
+   <div class="paso"><div class="num">1</div><h3>Nos escribes</h3><p>Por WhatsApp o correo te mandamos fotos, ubicación y condiciones de la propiedad que te interesa.</p></div>
+   <div class="paso"><div class="num">2</div><h3>La visitas</h3><p>Agendamos una visita acompañada, muchas veces el mismo día, para que la recorras con calma.</p></div>
+   <div class="paso"><div class="num">3</div><h3>Cerramos en orden</h3><p>Documentación en regla y contrato por escrito, sin comisiones de intermediarios.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap duenos">
+  <div class="img" role="img" aria-label="Fachada de casa en Campeche"></div>
   <div>
-    <div class="eyebrow">Temporada de Día de Muertos</div>
-    <h1>Esa foto de tus abuelos, <em>como nueva</em> para tu ofrenda</h1>
-    <p>Restauramos fotos viejas, rotas o borrosas y te las entregamos listas para imprimir. Vista previa gratis. Desde $99.</p>
-    <div class="actions">
-      <a class="btn wa" href="https://wa.me/529617874812?text=Hola%2C%20quiero%20restaurar%20una%20foto%20para%20mi%20ofrenda">Mandar mi foto por WhatsApp</a>
-      <a class="btn ghost" href="/ofrenda/">Ver precios y detalles</a>
-    </div>
+   <div class="eyebrow">Nosotros</div>
+   <h2 style="margin:.2em 0 .4em">Propietarios que muestran sus propias casas</h2>
+   <p>Sastal Propiedades no es un portal ni una agencia: somos un grupo de propietarios de Campeche que ofrece sus casas y departamentos directamente. Conocemos cada propiedad porque es nuestra, y respondemos nosotros mismos.</p>
+   <a class="btn solid" href="https://propiedades.sastal.mx" style="margin-top:8px">Conocer las propiedades</a>
   </div>
-  <div class="rt" data-retrato></div>
+ </div>
+</section>
+
+<section class="contacto" id="contacto">
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Contacto</div>
+   <h2 style="margin:.2em 0 .4em">¿Te interesa alguna propiedad?</h2>
+   <p>Escríbenos y te respondemos con fotos, ubicación y horarios de visita.</p>
+   <div class="acciones" style="margin-top:20px"><a class="btn claro" href="https://wa.me/529617874812?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20propiedades.">WhatsApp</a></div>
+  </div>
+  <div class="datoscont">
+   <div><span>WhatsApp</span><a href="https://wa.me/529617874812">961 787 4812</a></div>
+   <div><span>Correo</span><a href="mailto:contacto@sastal.mx">contacto@sastal.mx</a></div>
+   <div><span>Ubicación</span>San Francisco de Campeche, Campeche</div>
+  </div>
+ </div>
+</section>
+
+<div class="digital">
+ <div class="wrap">
+  <div class="caja">
+   <div><div class="eyebrow">También en Sastal</div><h3>Sastal Digital</h3><p>Fotos restauradas para tu ofrenda, páginas web y publicaciones para negocios locales.</p></div>
+   <a class="btn linea" href="/digital/">Ver servicios digitales →</a>
+  </div>
+ </div>
 </div>
 
-<section id="servicios" style="border-top:0;padding-top:0">
-  <div class="eyebrow">Servicios</div>
-  <h2>Qué hacemos</h2>
-  <div class="svc">
-    <a href="/ofrenda/"><span class="badge hot">Temporada</span><h3>Fotos para tu ofrenda</h3><p>Restauración de fotos antiguas y retrato con papel picado, nombre y fechas, listo para imprimir.</p><span class="from">Desde $99 →</span></a>
-    <a href="#web"><h3>Páginas web para negocios</h3><p>Tu menú o catálogo, horario, ubicación y botón de WhatsApp. Lista en 48 horas, pago único.</p><span class="from">Desde $1,000 →</span></a>
-    <a href="/negocios/"><span class="badge">Nuevo</span><h3>Publicaciones para tu negocio</h3><p>Diseñamos y programamos 12 o 16 publicaciones al mes en tu Facebook: menú, promociones y avisos. Tú solo las apruebas.</p><span class="from">Desde $900 al mes →</span></a>
-    <a href="/negocios/#maps"><h3>Tu negocio en Google Maps</h3><p>Damos de alta o arreglamos tu ficha: horario, teléfono, fotos y ubicación exacta, para que te encuentren al buscar.</p><span class="from">$700 pago único →</span></a>
-    <a href="https://wa.me/529617874812?text=Hola%2C%20me%20interesa%20una%20invitaci%C3%B3n%20digital"><span class="badge">Nuevo</span><h3>Invitaciones digitales</h3><p>Para XV años, bodas, bautizos y cumpleaños: cuenta regresiva, mapa y confirmación de asistencia por WhatsApp.</p><span class="from">Cotiza por WhatsApp →</span></a>
-    <a href="https://wa.me/529617874812?text=Hola%2C%20me%20interesa%20un%20asistente%20de%20WhatsApp%20para%20mi%20negocio"><span class="badge">Nuevo</span><h3>Asistente virtual de WhatsApp</h3><p>Responde a tus clientes las 24 horas: precios, horarios, citas y pedidos. Lo configuramos por ti.</p><span class="from">Cotiza por WhatsApp →</span></a>
-    <a href="https://propiedades.sastal.mx"><span class="badge">Nuevo</span><h3>Sastal Propiedades</h3><p>Casas y departamentos en venta y renta en Campeche, mostrados directamente por sus propietarios. Visitas acompañadas y papeles en regla.</p><span class="from">Ver propiedades →</span></a>
-  </div>
-</section>
+<footer>
+ <div class="wrap">
+  <span>© Sastal · San Francisco de Campeche</span>
+  <span><a href="https://propiedades.sastal.mx">Propiedades</a> · <a href="/digital/">Digital</a> · <a href="mailto:contacto@sastal.mx">contacto@sastal.mx</a> · <a href="https://www.facebook.com/profile.php?id=61594369547874" target="_blank" rel="noopener">Facebook</a></span>
+ </div>
+</footer>
 
-<div class="hero" id="web" style="border-top:1px solid var(--line);padding-top:32px;max-width:none">
-  <div class="eyebrow">Sitios web para negocios locales</div>
-  <h1>Que te encuentren en Google y te pidan por WhatsApp. Listo en 48 horas.</h1>
-  <p>Una página sencilla, rápida y hecha para celular, con tu menú o catálogo, horario, ubicación y botón directo a tu WhatsApp. Sin mensualidades obligatorias.</p>
-  <div class="actions">
-    <a class="btn wa" href="https://wa.me/529617874812?text=Hola%2C%20me%20interesa%20una%20p%C3%A1gina%20para%20mi%20negocio">Cotizar por WhatsApp</a>
-    <a class="btn ghost" href="/ejemplo/">Ver un ejemplo</a>
-  </div>
-</div>
-
-<section>
-  <div class="eyebrow">Paquetes</div>
-  <h2>Precios claros, pago único</h2>
-  <div class="plans">
-    <div class="plan">
-      <h3>Presencia</h3>
-      <div class="p">$1,000 <small>MXN</small></div>
-      <ul>
-        <li>Página de una sola pantalla</li>
-        <li>Horario, dirección y mapa</li>
-        <li>Botón de WhatsApp y llamada</li>
-        <li>Enlace listo para tu Facebook e Instagram</li>
-        <li>Entrega en 48 h</li>
-      </ul>
-    </div>
-    <div class="plan hi">
-      <span class="tag">El más pedido</span>
-      <h3>Menú o catálogo</h3>
-      <div class="p">$2,000 <small>MXN</small></div>
-      <ul>
-        <li>Todo lo del paquete Presencia</li>
-        <li>Menú o catálogo completo con precios</li>
-        <li>Sección de servicios y opiniones</li>
-        <li>Perfil de Google Maps configurado</li>
-        <li>Una ronda de cambios incluida</li>
-      </ul>
-    </div>
-    <div class="plan">
-      <h3>Dominio propio</h3>
-      <div class="p">+ $900 <small>MXN / año</small></div>
-      <ul>
-        <li>Tu dirección tunegocio.com o .com.mx</li>
-        <li>Correo profesional opcional</li>
-        <li>Se agrega a cualquier paquete</li>
-        <li>Incluye el registro del primer año</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="eyebrow">Ejemplo</div>
-  <h2>Así queda un negocio de comida</h2>
-  <div class="demo">
-    <div>
-      <p>Lonchería La Ceiba es un negocio ficticio que armamos como muestra: menú con precios, horario, ubicación, reseñas y botón de pedido por WhatsApp. Ábrelo en tu celular y verás cómo lo vería tu cliente.</p>
-      <a class="btn" href="/ejemplo/">Abrir el ejemplo</a>
-    </div>
-    <div class="thumb" role="img" aria-label="Vista previa del sitio de muestra"></div>
-  </div>
-</section>
-
-<section>
-  <div class="eyebrow">Cómo funciona</div>
-  <h2>Tres pasos y ya</h2>
-  <div class="steps">
-    <div class="step"><b>Nos mandas la información</b><p>Nombre, logo si tienes, fotos, precios, horario y tu número de WhatsApp. Por WhatsApp está bien.</p></div>
-    <div class="step"><b>Te enviamos la página en 48 h</b><p>La revisas en tu celular y nos dices qué cambiar. Una ronda de cambios va incluida.</p></div>
-    <div class="step"><b>La publicamos y cobramos</b><p>50% al iniciar y 50% al publicar. Transferencia, Mercado Pago o efectivo.</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="eyebrow">Quiénes somos</div>
-  <div class="about">
-    <div class="avatar"><svg class="mk" viewBox="0 0 34 34" width="40" height="40" aria-hidden="true"><rect width="34" height="34" rx="7.5" fill="#0E6E5B"/><path d="M17 6.8 27.2 17 17 27.2 6.8 17Z" fill="none" stroke="#F5F7F4" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 12.9 21.1 17 17 21.1 12.9 17Z" fill="#F5F7F4"/></svg></div>
-    <div>
-      <h2 style="margin-bottom:8px">Grupo Sastal</h2>
-      <p>Somos un grupo de profesionales emprendedores de Campeche que reúne ingeniería, informática y fotografía. También tenemos negocios propios, así que sabemos lo que un comercio necesita: que el cliente encuentre el teléfono, el horario y el precio sin dar vueltas.</p>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="eyebrow">Dudas comunes</div>
-  <h2>Antes de preguntar</h2>
-  <details><summary>¿La página web tiene mensualidad?</summary><p>No. La página es pago único. Solo el dominio propio, si lo quieres, se renueva cada año.</p></details>
-  <details><summary>¿Necesito saber de computación?</summary><p>No. Tú nos mandas la información por WhatsApp y nosotros hacemos todo. Si después quieres cambiar precios, nos escribes y lo actualizamos.</p></details>
-  <details><summary>¿Puedo cambiar el menú después?</summary><p>Sí. Cambios pequeños (precios, horario) van sin costo el primer mes; después, $150 MXN por actualización.</p></details>
-  <details><summary>¿Y si no tengo fotos ni logo?</summary><p>Se puede armar sin logo, con tu nombre bien escrito, y con fotos que tomemos con el celular. Queda bien.</p></details>
-</section>
-
-<footer class="site">Sastal · San Francisco de Campeche, México · WhatsApp 961 787 4812 · <a href="https://propiedades.sastal.mx" style="color:inherit">Propiedades</a> · <a href="mailto:contacto@sastal.mx" style="color:inherit">contacto@sastal.mx</a> · <a href="https://www.facebook.com/profile.php?id=61594369547874" target="_blank" rel="noopener" style="color:inherit">Facebook</a> · sastal.mx</footer>
-</div>
-
-<script src="/retrato.js" defer></script>
+<script>
+(async()=>{
+ const B='https://propiedades.sastal.mx/';
+ try{
+  const d=await fetch(B+'datos/propiedades.json?t='+Date.now()).then(r=>r.json());
+  const arr=(Array.isArray(d)?d:d.propiedades)||[];
+  if(!arr.length) return;
+  arr.sort((a,b)=>(b.destacada?1:0)-(a.destacada?1:0)||(a.estado==='disponible'?-1:1));
+  const fmt=n=>'$'+Number(n).toLocaleString('es-MX');
+  const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  document.getElementById('lista').innerHTML=arr.slice(0,6).map(p=>{
+   const op=p.operacion==='renta'?'En renta':'En venta';
+   const libre=p.estado==='disponible';
+   const etq=libre?(p.etiqueta_estado?op+' · '+p.etiqueta_estado:op):(p.estado==='rentada'?'Rentada · lista de espera':'Vendida');
+   const datos=[p.recamaras&&p.recamaras+' rec.',p.banos&&p.banos+' baños',p.construccion_m2&&p.construccion_m2+' m² constr.',p.terreno_m2&&p.terreno_m2+' m² terreno',p.estacionamientos&&p.estacionamientos+' estac.'].filter(Boolean).map(x=>'<span>'+x+'</span>').join('');
+   const foto=p.fotos&&p.fotos[0]?B+p.fotos[0]:'';
+   return `<a class="ficha" href="${B}propiedad.html?clave=${encodeURIComponent(p.clave)}">
+    <div class="foto" style="background-image:url('${foto}')"><span class="etq ${libre?'':'ocupada'}">${esc(etq)}</span></div>
+    <div class="txt"><div class="zona">${esc(p.colonia)} · ${esc(p.ciudad)}</div><h3>${esc(p.titulo)}</h3><div class="datos">${datos}</div>
+    <div class="precio">${fmt(p.precio)} <small>${esc(p.moneda||'MXN')}${p.operacion==='renta'?' / '+(p.periodo||'mes'):''}</small></div></div></a>`;
+  }).join('');
+ }catch(e){}
+})();
+</script>
 </body>
 </html>
