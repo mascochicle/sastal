@@ -34,7 +34,9 @@ h2{font-size:clamp(2rem,4.2vw,2.9rem)}
 .barra nav a{text-decoration:none;opacity:.9}.barra nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
 /* portada */
 .portada{position:relative;min-height:min(92vh,760px);display:flex;align-items:flex-end;color:var(--huevo);background:#3a342c url(https://propiedades.sastal.mx/img/casa-lomas/06-porche.jpg) center/cover no-repeat}
-.portada::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,.15) 35%,rgba(20,18,15,.72) 100%)}
+.portada::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,15,.78) 0%,rgba(20,18,15,.55) 38%,rgba(20,18,15,.12) 70%,rgba(20,18,15,0) 100%),linear-gradient(180deg,rgba(20,18,15,.45) 0%,rgba(20,18,15,0) 30%,rgba(20,18,15,.45) 100%)}
+.portada h1,.portada p{text-shadow:0 1px 14px rgba(0,0,0,.35)}
+@media (max-width:760px){.portada::before{background:linear-gradient(180deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,.45) 40%,rgba(20,18,15,.8) 100%)}}
 .portada .wrap{position:relative;padding-block:120px 64px;width:100%}
 .portada .eyebrow{color:#e9dcc2}
 .portada h1{font-size:clamp(2.6rem,6.6vw,5rem);max-width:13ch;margin:.25em 0 .3em}
